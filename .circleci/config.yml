@@ -4,7 +4,7 @@ orbs:
   octo-exp: octopus-samples/octo-exp@0.0.7
 
 jobs:
-  octopus-release:
+  build:
     executor:
       name: octo-exp/default
     steps:
@@ -14,19 +14,6 @@ jobs:
           package_id: TerraLearn
           server: https://dinindunz.octopus.app/app#
           version: 1.2.3
-      - octo-exp/create-release:
-          api_key: API-IAQ7MTYYN9J2FL0DNFZXIPC85CHYJAD5
-          project: TerraLearn
-          release_number: 1.2.3
-          server: https://dinindunz.octopus.app/app#
-#      - octo-exp/deploy-release:
-#         api_key: OCTOPUS_API_KEY
-#         deploy_to: Development
-#         progress: true
-#         project: OctoPetShop
-#         release_number: 1.2.3
-#         server: OCTOPUS_SERVER_URL
-
-workflows:
-  jobs:
-    - octopus-release
+orbs:
+  octo-exp: octopus-samples/octo-exp@0.0.3
+version: 2.1
