@@ -14,6 +14,7 @@ jobs:
           package_id: TerraLearn
           server: https://dinindunz.octopus.app/app#
           version: 1.2.3
+          ignoreSslErrors: true
 
 workflows:
   build_and_test:
