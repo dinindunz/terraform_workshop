@@ -3,6 +3,11 @@ version: 2.1
 orbs:
   octo-exp: octopus-samples/octo-exp@0.0.7
 
+version: 2.1
+
+orbs:
+  octo-exp: octopus-samples/octo-exp@0.0.7
+
 jobs:
   build:
     executor:
@@ -14,6 +19,3 @@ jobs:
           package_id: TerraLearn
           server: https://dinindunz.octopus.app/app#
           version: 1.2.3
-orbs:
-  octo-exp: octopus-samples/octo-exp@0.0.3
-version: 2.1
