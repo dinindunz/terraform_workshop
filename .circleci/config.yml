@@ -4,13 +4,17 @@ orbs:
   octo-exp: octopus-samples/octo-exp@0.0.7
 
 jobs:
-  build:
+  octopus-release:
     executor:
       name: octo-exp/default
     steps:
       - octo-exp/install-tools
       - octo-exp/build-information:
-          api_key: API-IAQ7MTYYN9J2FL0DNFZXIPC85CHYJAD5
+          api_key: "API-IAQ7MTYYN9J2FL0DNFZXIPC85CHYJAD5"
           package_id: TerraLearn
-          server: https://dinindunz.octopus.app/app#
+          server: "https://dinindunz.octopus.app/app#"
           version: 1.2.3
+
+workflow:
+  jobs:
+    - octopus-release
