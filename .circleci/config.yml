@@ -10,10 +10,10 @@ jobs:
     steps:
       - octo-exp/install-tools
       - octo-exp/build-information:
-          api_key: "API-IAQ7MTYYN9J2FL0DNFZXIPC85CHYJAD5"
+          api_key: API-IAQ7MTYYN9J2FL0DNFZXIPC85CHYJAD5
           package_id: TerraLearn
-          server: "https://dinindunz.octopus.app/app#"
-          version: 1.2.3
+          server: https://dinindunz.octopus.app/app#
+          release_number: 1.2.3
 
 workflows:
   build_and_test:
