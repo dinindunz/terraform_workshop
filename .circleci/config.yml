@@ -7,7 +7,7 @@ jobs:
       - octo-exp/install-tools
       - octo-exp/create-release:
           api_key: API-IAQ7MTYYN9J2FL0DNFZXIPC85CHYJAD5
-          project: OctoPetShop
+          project: TerraLearn
           release_number: 1.2.3
           server: https://dinindunz.octopus.app/app#
 orbs:
