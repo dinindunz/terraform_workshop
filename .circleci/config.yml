@@ -3,11 +3,6 @@ version: 2.1
 orbs:
   octo-exp: octopus-samples/octo-exp@0.0.7
 
-version: 2.1
-
-orbs:
-  octo-exp: octopus-samples/octo-exp@0.0.7
-
 jobs:
   build:
     executor:
@@ -18,4 +13,4 @@ jobs:
           api_key: API-IAQ7MTYYN9J2FL0DNFZXIPC85CHYJAD5
           package_id: TerraLearn
           server: https://dinindunz.octopus.app/app#
-          release_number: 1.2.3
+          version: 1.2.3
