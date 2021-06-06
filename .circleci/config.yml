@@ -11,9 +11,9 @@ jobs:
       - octo-exp/install-tools
       - octo-exp/build-information:
           #api_key: \"API-IAQ7MTYYN9J2FL0DNFZXIPC85CHYJAD5\" (type string)
-          api_key: $OCTOPUS_API_KEY
+          api_key: '${OCTOPUS_API_KEY}'
           package_id: TerraLearn
-          server: $OCTOPUS_SERVER_URL
+          server: '${OCTOPUS_SERVER_URL}'
           version: 1.2.3
 
 workflows:
