@@ -16,7 +16,7 @@ jobs:
       name: octo-exp/default
     steps:
       - octo-exp/install-tools
-      - checkout
+#      - checkout
 #      - octo-exp/pack:
 #          base_path: terralearn
 #          id: TerraLearn
