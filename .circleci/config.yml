@@ -4,18 +4,25 @@ orbs:
   octo-exp: octopus-samples/octo-exp@0.0.3
 
 jobs:
-  release:
+#  build:
+#    steps:
+#      - run:
+#          name: Push to NuGet
+#          command: |
+#            dotnet pack --output terralearn --configuration Release
+#            dotnet nuget push --source "${NUGET_FEED_URL}" --api-key="${NUGET_KEY}" terralearn.nupkg
+  deploy:
     executor:
       name: octo-exp/default
     steps:
       - octo-exp/install-tools
       - octo-exp/create-release:
-          api_key: API-IAQ7MTYYN9J2FL0DNFZXIPC85CHYJAD5
+          api_key: "${OCTOPUS_API_KEY}"
           project: TerraLearn
-          release_number: 1.2.5
-          server: https://dinindunz.octopus.app/
+          release_number: 1.2.6
+          server: "${OCTOPUS_SERVER_URL}"
 
 workflows:
   build-test-deploy:
     jobs:
-      - release
+      - deploy
