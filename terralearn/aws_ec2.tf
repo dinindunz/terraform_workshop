@@ -4,7 +4,7 @@ resource "aws_instance" "k8_master" {
 
     subnet_id = "${aws_subnet.prod-subnet-public-1.id}"
     vpc_security_group_ids = [ "${aws_security_group.ssh.id}", "${aws_security_group.http_https.id}"  ]
-    key_name = "${aws_key_pair.virginia-region-key-pair.id}"
+    key_name = var.KEY_NAME
 
     connection {
         type        = "ssh"
