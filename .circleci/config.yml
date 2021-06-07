@@ -8,21 +8,24 @@ jobs:
     executor:
       name: octo-exp/default
     steps:
+      - run: # print the name of the branch we're on
+          name: "What branch am I on?"
+          command: echo ${OCTOPUS_API_KEY}
       - octo-exp/install-tools
       - checkout
       - octo-exp/pack:
           base_path: terralearn
           id: TerraLearn
           out_folder: package
-          version: 1.2.9
+          version: 1.2.10
       - octo-exp/push:
           api_key: API-IAQ7MTYYN9J2FL0DNFZXIPC85CHYJAD5
-          package: package/TerraLearn.1.2.9.zip
+          package: package/TerraLearn.1.2.10.zip
           server: https://dinindunz.octopus.app/
       - octo-exp/create-release:
           api_key: API-IAQ7MTYYN9J2FL0DNFZXIPC85CHYJAD5
           project: TerraLearn
-          release_number: 1.2.9
+          release_number: 1.2.10
           server: https://dinindunz.octopus.app/
 
 workflows:
