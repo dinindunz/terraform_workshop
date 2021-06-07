@@ -28,7 +28,7 @@ resource "aws_instance" "k8_master" {
     }
 }
 
-resource "aws_key_pair" "virginia-region-key-pair" {
-    key_name = var.KEY_NAME
-    public_key = "${file(var.PUBLIC_KEY)}"
-}
+#resource "aws_key_pair" "virginia-region-key-pair" {
+#    key_name = var.KEY_NAME
+#    public_key = "${file(var.PUBLIC_KEY)}"
+#}
