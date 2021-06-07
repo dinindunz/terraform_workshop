@@ -1,13 +1,13 @@
 variable "AWS_REGION" {
-  default = "us-east-1"
+  default = "#{AWS_REGION}"
 }
 
 variable "AWS_SECRET_KEY" {
-  default = "7kHwezJz97jeolT8U54wn59YxN2s+NqW8c5TQ0ZT"
+  default = "#{AWS_SECRET_KEY}"
 }
 
 variable "AWS_ACCESS_KEY" {
-  default = "AKIAYMBKFILVDPEXAE4Q"
+  default = "#{AWS_ACCESS_KEY}"
 }
 
 variable "KEY_NAME" {
