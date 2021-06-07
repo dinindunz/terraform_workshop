@@ -18,7 +18,7 @@ jobs:
       - octo-exp/install-tools
       - checkout
       - octo-exp/pack:
-          base_path: ../terralearn
+          base_path: ~/project
           id: TerraLearn
           out_folder: package
           version: 1.2.7
