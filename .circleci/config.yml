@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  octo-exp: octopus-samples/octo-exp@0.0.3
+  octo-exp: octopus-samples/octo-exp@0.0.7
 
 jobs:
 #  build:
