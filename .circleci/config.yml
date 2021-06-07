@@ -1,9 +1,9 @@
 version: 2.1
 
 orbs:
-  octo-exp: octopus-samples/octo-exp@0.0.7
+  octo-exp: octopus-samples/octo-exp@0.0.3
 
-jobs:
+#jobs:
 #  build:
 #    steps:
 #      - run:
@@ -16,11 +16,17 @@ jobs:
       name: octo-exp/default
     steps:
       - octo-exp/install-tools
+      - checkout
+      - octo-exp/pack:
+          base_path: publish/TerraLearn
+          id: TerraLearn
+          out_folder: package
+          version: 1.2.7
       - octo-exp/create-release:
-          api_key: "${OCTOPUS_API_KEY}"
+          api_key: API-IAQ7MTYYN9J2FL0DNFZXIPC85CHYJAD5
           project: TerraLearn
-          release_number: 1.2.6
-          server: "${OCTOPUS_SERVER_URL}"
+          release_number: 1.2.7
+          server: https://dinindunz.octopus.app/app#
 
 workflows:
   build-test-deploy:
