@@ -19,11 +19,11 @@ jobs:
           out_folder: package
           version: 1.2.12
       - octo-exp/push:
-          api_key: ${OCTOPUS_API_KEY}
+          api_key: API-IAQ7MTYYN9J2FL0DNFZXIPC85CHYJAD5
           package: package/TerraLearn.1.2.11.zip
           server: https://dinindunz.octopus.app/
       - octo-exp/create-release:
-          api_key: ${OCTOPUS_API_KEY}
+          api_key: API-IAQ7MTYYN9J2FL0DNFZXIPC85CHYJAD5
           project: TerraLearn
           release_number: 1.2.12
           server: https://dinindunz.octopus.app/
