@@ -17,22 +17,22 @@ jobs:
           base_path: terralearn
           id: TerraLearn
           out_folder: package
-          version: 1.2.15
+          version: 1.2.16
       - octo-exp/push:
           api_key: API-IAQ7MTYYN9J2FL0DNFZXIPC85CHYJAD5
-          package: package/TerraLearn.1.2.15.zip
+          package: package/TerraLearn.1.2.16.zip
           server: https://dinindunz.octopus.app/
       - octo-exp/create-release:
           api_key: API-IAQ7MTYYN9J2FL0DNFZXIPC85CHYJAD5
           project: TerraLearn
-          release_number: 1.2.15
+          release_number: 1.2.16
           server: https://dinindunz.octopus.app/
       - octo-exp/deploy-release:
           api_key: API-IAQ7MTYYN9J2FL0DNFZXIPC85CHYJAD5
           deploy_to: Development
           progress: true
           project: TerraLearn
-          release_number: 1.2.15
+          release_number: 1.2.16
           server: https://dinindunz.octopus.app/
 
 workflows:
