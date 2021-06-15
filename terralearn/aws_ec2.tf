@@ -9,7 +9,7 @@ resource "aws_instance" "k8_master" {
     connection {
         type        = "ssh"
         user        = "ubuntu"
-        private_key = "${file(var.KEY_NAME)}"        
+        private_key = "${file(var.PRIVATE_KEY)}"        
         host        = self.public_ip #"${aws_instance.k8_master.public_ip}"
     }
     provisioner "file" {
