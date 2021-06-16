@@ -1,8 +1,8 @@
 terraform {
     backend "s3" {
-        bucket = "dinindunz-terralearn-tfstare"
+        bucket = "${var.S3_BACKEND}"
         encrypt = true
         key = "terralearn/state.tfstate" # Where you want to store state in S3
-        region = "us-east-1"
+        region = "${var.AWS_REGION}"
     }
 }

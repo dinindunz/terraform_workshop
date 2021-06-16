@@ -1,13 +1,16 @@
 variable "AWS_REGION" {
   default = "#{AWS_REGION}"
+  #default = "us-east-1"
 }
 
 variable "AWS_SECRET_KEY" {
   default = "#{AWS_SECRET_KEY}"
+  #default = "qh8UxHWgqCY/iauI0QUeri7hsdbTQb6Lu6+iB/GG"
 }
 
 variable "AWS_ACCESS_KEY" {
   default = "#{AWS_ACCESS_KEY}"
+  #default = "AKIA53WVF44C4MKFKT5D"
 }
 
 variable "KEY_NAME" {
@@ -20,6 +23,11 @@ variable "PUBLIC_KEY" {
 
 variable "PRIVATE_KEY" {
   default = "key_pairs/virginia-region-key-pair"
+}
+
+variable "S3_BACKEND" {
+  default = "#{S3_BACKEND}"
+  #default = "dinindunz-terralearn-tfstare-"
 }
 
 variable "AMI" {
